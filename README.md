@@ -67,7 +67,7 @@ uv run src/crawler.py --limit 50
 ### 2. Verify the Server
 Check if the server can find the documents you just crawled:
 ```bash
-uv run test_server.py
+uv run python -m tests.test_server
 ```
 
 ### 3. Run the Server
@@ -138,7 +138,7 @@ Add this configuration to your MCP settings file (e.g., `claude_desktop_config.j
 
 4.  **运行测试**:
     ```bash
-    uv run test_server.py
+    uv run python -m tests.test_server
     ```
 
 ## 🔌 接入配置
