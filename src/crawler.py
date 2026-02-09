@@ -5,11 +5,9 @@ from urllib.parse import urljoin, urlparse
 import argparse
 import httpx
 import xml.etree.ElementTree as ET
+from src.config import BASE_URL, SITEMAP_URL, DOCS_DIR
 
-# Configuration
-BASE_URL = "https://docs.langchain.com/oss/python/langchain/overview"
-SITEMAP_URL = "https://docs.langchain.com/sitemap.xml"
-OUTPUT_DIR = os.path.join("data", "docs")
+OUTPUT_DIR = str(DOCS_DIR)
 
 async def get_sitemap_urls(sitemap_url):
     try:

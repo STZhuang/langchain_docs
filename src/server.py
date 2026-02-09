@@ -2,14 +2,12 @@ from mcp.server.fastmcp import FastMCP
 import os
 import glob
 from typing import List, Dict
+from src.config import DOCS_DIR
 
 # Initialize FastMCP
 mcp = FastMCP("langchain-docs")
 
-# Resolve docs directory relative to this script
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-# Go up one level to find data/docs
-DOCS_DIR = os.path.join(os.path.dirname(BASE_DIR), "data", "docs")
+DOCS_DIR = str(DOCS_DIR)
 
 # Global cache for documents
 DOCS_CACHE: List[Dict] = []
